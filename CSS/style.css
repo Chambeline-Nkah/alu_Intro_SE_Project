@@ -57,35 +57,35 @@ h1, h2,h3, h4, h5, {
 
 h1 {
     font-size: 2.4rem;
- }
+}
 
- h2 {
+h2 {
     font-size: 2.4rem;
- }
+}
 
- h3 {
+h3 {
     font-size: 1.6rem;
- }
+}
 
- h4 {
+h4 {
     font-size: 1.3rem;
- }
+}
 
- h5 {
+h5 {
     font-size: 1rem;
- }
+}
 
- a {
+a {
     color: var(--color-white);
- }
+}
 
- img {
+img {
     width: 100%; 
     display: block;
     object-fit: cover;
- }
+}
 
- .btn {
+.btn {
     display: inline-block;
     background: var(--color-white);
     color: var(--color-black);
@@ -93,22 +93,22 @@ h1 {
     border: 1px solid transparent; 
     font-weight: 500; 
     transition: var(--transition);
- }
+}
 
- .btn:hover{
+.btn:hover{
     background: transparent;
     color: var(--color-white);
     border-color: var(--color-white);
- }
+}
 
- .btn-primary {
+.btn-primary {
     background: var(--color-danger);
     color: var(--color-white);
- }
+}
 
 
  /* ============== NAVBAR ==========*/
- nav {
+nav {
     background: transparent;
     width: 100vw; /*view port width on all devices is 100% */
     height: 5rem;
@@ -214,9 +214,9 @@ header {
 
    .course {
     background: var(--color-bg2);
-    padding: 2rem;
-    border-radius: 2rem;
-    transistion var(--transition);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
    }
 
    .course:hover {
@@ -230,6 +230,7 @@ header {
    }
 
    .course p {
+    margin: 1.2rem 0 2rem;
     font-size: 0.85rem;
    }
 
@@ -237,15 +238,15 @@ header {
 .faqs {
     background: var(--color-bg1);
     box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
- }
+}
 
- .faqs__container {
+.faqs__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem; 
- }
+}
 
- .faq{
+.faq{
     padding: 2rem;
     display: flex;
     align-items: center;
@@ -253,35 +254,35 @@ header {
     height:fit-content;
     background: var(--color-primary);
     cursor: pointer;
- }
+}
 
- .faq h4 {
+.faq h4 {
     font-size: 1rem;
     line-height: 2rem;
- }
+}
 
- .faq__icon {
+.faq__icon {
     align-self: flex-start;    
     font-size: 1.2rem; 
- }
+}
 
- .faq p {
+.faq p {
     margin-top: 0.8rem;
     display: none;
- }
+}
 
- .faq.open p {
+.faq.open p {
     display: block;
- }
+}
 
  /* ============== TESTIMONIALS ==========*/
- .testimonails__container {
+.testimonails__container {
     overflow-x: hidden;
     position: relative;
     margin-bottom: 5rem;
- }
+}
 
- .testimonial {
+.testimonial {
     padding-top: 2rem;
 }
 
@@ -352,16 +353,6 @@ header {
     
 }
 
-.footer__socials li {
-    display: inline;
-    padding: 0rem 0.7rem 0;
-    font-size: 1.2rem;
-}
-
-.footer__socials  {
-    margin-top: 1rem;
-    
-}
 
 .footer__container ul li a:hover {
    cursor: pointer;
@@ -382,4 +373,281 @@ header {
 .footer__copyright a:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+ /* =========== MEDIA QUERIES (TABLETS) ==========*/
+ @media screen and (max-width: 1024px) {
+    .container {
+      width: var(--container-width-md);
+    }
+      h1 {
+          font-size: 2.2rem;
+      }
+
+      h2 {
+          font-size: 1.7rem;
+      }
+
+      h3 {
+          font-size: 1.4rem;
+      }
+
+      h4 {
+          font-size: 1.2rem;
+      }
+
+      
+/* ======= NAVBAR =========*/ 
+      nav button {
+          display: inline-block;
+          background: transparent;
+          font-size: 1.8rem;
+          color: var(--color-white);
+          cursor: pointer;
+      }
+  
+      nav button#close-menu-btn {
+          display:none;
+      }
+
+      .nav__menu {
+          position: fixed;
+          top:5rem;
+          right:5%;
+          height: fit-content;
+          width: 18rem;
+          flex-direction: column;
+          gap: 0;
+          display:none;
+      }
+     .nav__menu li {
+      width: 100%;
+      height: 5.8rem;
+      animation: animateNavItems 400ms linear forwards;
+      transform-origin: top right;
+      opacity: 0; /* Makes the animation not to be visible at start
+      but the will only be visible when they are animated */
+
+     }
+
+     .nav__menu li a {
+      background: var(--color-primary);
+      box-shadow: -4rem 6rem 10 rem rgba(0, 0, 0, 0.6);
+      width:100%;
+      height:100%;
+      display: grid;
+      place-items: center;
+  } 
+
+  .nav__menu li a:hover {
+      background: var(--color-bg2);
+      color: var(--color-white);
+      text-decoration: underline;
+  }
+
+      /* Sets Animation Delay */
+
+     .nav__menu li:nth-child(2) {
+     animation-delay:200ms;
+      }
+
+     .nav__menu li:nth-child(3) {
+     animation-delay: 400ms;
+     }
+
+     .nav__menu li:nth-child(4) {
+     animation-delay: 600ms;
+     }
+      
+     @keyframes animateNavItems {
+      0 {
+          transform: rotateZ(-60deg) rotateX(90deg) scale(0.1);
+      }
+      
+      100% {
+          transform: rotateZ(0) rotateX(0) scale(1);
+          opacity: 1; /* the animation is going to be visible (shown here) 
+          ==after delay hence this */
+      }
+
+      
+   }
+   /* ======= HEADER =========*/ 
+   header {
+      height: 52vh;
+      margin-bottom: 7rem;
+      padding-bottom: 5rem;
+      }
+
+
+  /* ======= categories =========*/ 
+  .categories {
+      height: auto; 
+  }
+
+      .categories__container {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+      }
+
+
+
+  /* ======= FAQS =========*/ 
+  .faqs__container {
+      grid-template-columns: 1fr;
+  }
+  .faq {
+      padding:1.5rem;
+  }
+
+   /* ======= FOOTER SECTION =========*/ 
+   .footer__container {
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+   }
+  }
+      
+
+
+
+  
+
+   /* ======= MEDIA QUERIES (PHONES) =========*/
+   @media screen and (max-width: 600px) {
+      .container {
+          width: var(--container-width-sm); 
+      }
+      
+  /* ======= NAV BAR =========*/
+  .nav__container {
+      text-align: center;
+      
+
+  }
+
+
+  .nav__menu {
+      right: 3%;
+  }
+
+ 
+  header {
+      height:100vh;
+  }
+
+  .header__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin-top: 0;
+      padding-top: 1.5rem;
+  }
+  
+  /* ======= CATEGORIES =========*/
+  .categories__left{
+   text-align: center;
+  }
+
+  .categories__right {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+  }
+  .category {
+      padding: 1rem;
+      border-radius: 1rem;
+  }
+
+  .category__icon {
+      margin-top: 4px;
+      display: inline-block;
+  }
+
+  /* ======= POPULAR COURSES =========*/
+  .courses__container {
+      grid-template-columns: 1fr;
+  }
+
+  /* ======= TESTIMONIALS  =========*/    
+  .testimonial__body{
+      padding: 1.2rem;
+  }
+
+  .testimonial {
+      margin-top: -2.5rem;
+  }
+
+  /* ======= FOOTER  =========*/
+  .footer__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+  }   
+
+  .footer__container p {
+      font-size: 1.05rem;
+      margin: 1rem auto;
+  }
+
+  .footer__container li {
+      font-size: 1.05rem;
+  }
+
+}
+
+/* Animation Effect */
+.hidden1 {
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.show1 {
+  opacity: 1;
+}
+
+@media(prefers-reduced-motion) {
+  .show {
+      transition: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loader Effects */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #7449f5;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from{
+      transform: rotate(0turn);
+  }
+
+  to{
+      transform: rotate(1turn);
+  }
 }
