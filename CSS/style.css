@@ -36,6 +36,8 @@ body {
     background: var(--color-bg);
 }
 
+
+
 .container {
 
     width: var(--container-width-lg);
@@ -186,6 +188,17 @@ header {
   
 }
 
+.header__right {
+    display: flex;
+    justify-content: flex-end; /* Adjusted for left alignment */
+    align-items: center;
+}
+
+.header__right-image {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* ============== CATEGORIES ==========*/
 .categories {
@@ -286,14 +299,6 @@ header {
     padding-top: 2rem;
 }
 
-.avatar {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 1rem;
-    border: 1rem solid var(--color-bg1);
-}
 
 .testimonial__info {
     text-align: center;
@@ -375,7 +380,7 @@ header {
     cursor: pointer;
 }
 
- /* =========== MEDIA QUERIES (TABLETS) ==========*/
+ /* =========== MEDIA QUERIES (TABLETS) ========== */
  @media screen and (max-width: 1024px) {
     .container {
       width: var(--container-width-md);
@@ -397,7 +402,7 @@ header {
       }
 
       
-/* ======= NAVBAR =========*/ 
+/* ======= NAVBAR ========= */
       nav button {
           display: inline-block;
           background: transparent;
@@ -467,12 +472,12 @@ header {
       100% {
           transform: rotateZ(0) rotateX(0) scale(1);
           opacity: 1; /* the animation is going to be visible (shown here) 
-          ==after delay hence this */
+          ==after delay hence this */ 
       }
 
       
    }
-   /* ======= HEADER =========*/ 
+   /* ======= HEADER ========= */
    header {
       height: 52vh;
       margin-bottom: 7rem;
@@ -480,7 +485,7 @@ header {
       }
 
 
-  /* ======= categories =========*/ 
+  /* ======= categories ========= */
   .categories {
       height: auto; 
   }
@@ -492,7 +497,7 @@ header {
 
 
 
-  /* ======= FAQS =========*/ 
+  /* ======= FAQS ========= */
   .faqs__container {
       grid-template-columns: 1fr;
   }
@@ -500,7 +505,7 @@ header {
       padding:1.5rem;
   }
 
-   /* ======= FOOTER SECTION =========*/ 
+   /* ======= FOOTER SECTION ========= */
    .footer__container {
       grid-template-columns: 1fr 1fr;
       text-align: center;
@@ -512,13 +517,13 @@ header {
 
   
 
-   /* ======= MEDIA QUERIES (PHONES) =========*/
+   /* ======= MEDIA QUERIES (PHONES) ========= */
    @media screen and (max-width: 600px) {
       .container {
           width: var(--container-width-sm); 
       }
       
-  /* ======= NAV BAR =========*/
+  /* ======= NAV BAR ========= */
   .nav__container {
       text-align: center;
       
@@ -542,7 +547,7 @@ header {
       padding-top: 1.5rem;
   }
   
-  /* ======= CATEGORIES =========*/
+  /* ======= CATEGORIES ========= */
   .categories__left{
    text-align: center;
   }
@@ -561,12 +566,8 @@ header {
       display: inline-block;
   }
 
-  /* ======= POPULAR COURSES =========*/
-  .courses__container {
-      grid-template-columns: 1fr;
-  }
 
-  /* ======= TESTIMONIALS  =========*/    
+  /* ======= TESTIMONIALS  ========= */
   .testimonial__body{
       padding: 1.2rem;
   }
@@ -575,7 +576,7 @@ header {
       margin-top: -2.5rem;
   }
 
-  /* ======= FOOTER  =========*/
+  /* ======= FOOTER  ========= */
   .footer__container {
       grid-template-columns: 1fr;
       text-align: center;
@@ -613,7 +614,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Loader Effects */
+/* Loader Effects 
 .loader {
   position: fixed;
   top: 0;
@@ -650,4 +651,4 @@ html {
   to{
       transform: rotate(1turn);
   }
-}
+}*/
