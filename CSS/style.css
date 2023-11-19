@@ -589,6 +589,13 @@ header {
       grid-template-columns: 1fr 1fr;
       text-align: center;
    }
+
+   /* ======= POPULAR COURSES =========*/
+   .courses {
+    margin-top: 0;
+}
+  .courses__container{
+    grid-template-columns: 1fr 1fr;
   }
       
 
@@ -645,7 +652,10 @@ header {
       display: inline-block;
   }
 
-
+  /* ======= POPULAR COURSES =========*/
+  .courses__container {
+    grid-template-columns: 1fr;
+}
   /* ======= TESTIMONIALS  ========= */
   .testimonial__body{
       padding: 1.2rem;
