@@ -91,7 +91,7 @@ img {
     display: inline-block;
     background: var(--color-white);
     color: var(--color-black);
-    padding: 1rem 2rem;
+    padding: 5px 10px;
     border: 1px solid transparent; 
     font-weight: 500; 
     transition: var(--transition);
@@ -117,7 +117,7 @@ nav {
     position: fixed; 
     top 0; 
     z-index: 11;
-    padding-left: 3rem;
+    padding-left: 9rem;
     padding-right: 3rem;
    
 }
@@ -129,11 +129,12 @@ nav {
 }
 
 .nav__container {
-    height: 100%;
+    height: 10%;
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    
+    background-color: rgba(31, 38, 65, 0.5);;
+    width: 100%;    
 }
 
 .nav__logo h4 {
@@ -168,8 +169,8 @@ nav button {
 header {
     position: relative;
     top: 5rem;
-    overflow: hideen;
-    height: 70vh;
+    overflow: hidden;
+    /* height: 70vh; */
     margin-bottom: 5rem;
 }
 
@@ -179,7 +180,6 @@ header {
     align-items: centre;
     gap: 5rem;
     height: 100%;
-
 }
 
 .header__left p 
@@ -209,21 +209,45 @@ header {
         margin-bottom: 3rem;
    }
 
+   .category__container {
+    display: grid;
+    grid-template-columns: auto auto; /* Two equal-width columns */
+    gap: auto; 
+   }
+
    .categories__container{
     display: grid;
     grid-template-columns: 40% 60%;
     gap: 4rem;
    }
 
+   .categories__left{
+    width: auto;
+    text-align: center;
+   }
+
    .categories__left p{
     margin: 1rem 0 3rem;
+    text-align: center;
    }
 
    .categories__right {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem;
+    width: Auto;
    }
+
+   /* .course__image {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+    
+    max-width: 50%; 
+    max-height: 50px; 
+    object-fit: contain;
+   } */
 
    .course {
     background: var(--color-bg2);
@@ -245,6 +269,55 @@ header {
    .course p {
     margin: 1.2rem 0 2rem;
     font-size: 0.85rem;
+   }
+
+   /* ============== CATEGORIES MIKE ==========*/
+   /* .cat_left {
+    width: 50%;
+   }
+   .cat_right {
+    width: 50%;
+    display: flex;
+    display:flexbox;
+   }
+   .content_cat_left {
+    width: 50%;
+   }
+   .content_cat_right {
+    width: 100%;
+   } */
+
+   .container.category__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows, adjust as needed */
+    gap: 20px; /* Adjust the gap between items as needed */
+}
+
+.cat_right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px; /* Adjust the gap between the columns as needed */
+}
+.cat_left {
+    align-items: center;
+    margin: auto;
+}
+.content_cat_right {
+    /* border: 1px solid #ccc; Optional: Add borders for visual separation */
+    padding: 10px; /* Optional: Add padding for spacing within each cell */
+    margin: auto;
+    height: 100%;
+    background-color: #31356d;
+}
+.course__image {
+    justify-content: center; 
+    align-items: center;
+    margin: auto;
+    
+    max-width: 50%; 
+    max-height: 50px; 
+    object-fit: contain;
    }
 
 /* ============== FAQS SECTION ==========*/
@@ -596,7 +669,6 @@ header {
 
 /* Animation Effect */
 .hidden1 {
-  opacity: 0;
   transition: all 1.5s;
 }
 
