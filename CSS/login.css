@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    background: #F9FEFF;
+    background: #FFF;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
@@ -64,7 +64,7 @@
     margin-bottom: 10px;
 }
 .policy {
-    color: #9835FF;
+    color: #790c74;
     background-color: #FFF;
     font-weight: 300;
 }
@@ -74,7 +74,7 @@
     justify-content: center;
     background-color: #FFF;
     color: #FFF;
-    background: #9835FF;
+    background: #1f2641;
     width: 100%;
     padding: 5px;
     margin-top: 20px;
